@@ -58,6 +58,8 @@ pyenv global 3.12
     ```
     cd api
     ```
+> macOSの場合：`brew install libmagic`でlibmagicをインストールしてください。
+
 2.  環境変数構成ファイルをコピー
 
     ```

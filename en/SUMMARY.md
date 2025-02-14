@@ -233,6 +233,7 @@
 * [User Agreement](policies/agreement/README.md)
   * [Terms of Service](https://dify.ai/terms)
   * [Privacy Policy](https://dify.ai/privacy)
+  * [Get Compliance Report](policies/agreement/get-compliance-report.md)
 
 ## Features
 

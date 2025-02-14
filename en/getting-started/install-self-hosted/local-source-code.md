@@ -59,19 +59,21 @@ pyenv global 3.12
     cd api
     ```
 
-2.  Copy the environment variable configuration file:
+> For macOS: install libmagic with `brew install libmagic`.
+
+1.  Copy the environment variable configuration file:
 
     ```
     cp .env.example .env
     ```
 
-3.  Generate a random secret key and replace the value of SECRET_KEY in the .env file:
+2.  Generate a random secret key and replace the value of SECRET_KEY in the .env file:
 
     ```
     awk -v key="$(openssl rand -base64 42)" '/^SECRET_KEY=/ {sub(/=.*/, "=" key)} 1' .env > temp_env && mv temp_env .env
     ```
 
-4.  Install the required dependencies:
+3.  Install the required dependencies:
 
     Dify API service uses [Poetry](https://python-poetry.org/docs/) to manage dependencies. You can execute `poetry shell` to activate the environment.
 
@@ -80,7 +82,7 @@ pyenv global 3.12
     poetry install
     ```
 
-5.  Perform the database migration:
+4.  Perform the database migration:
 
     Perform database migration to the latest version:
 
@@ -89,7 +91,7 @@ pyenv global 3.12
     flask db upgrade
     ```
 
-6.  Start the API server:
+5.  Start the API server:
 
     ```
     flask run --host 0.0.0.0 --port=5001 --debug
@@ -108,7 +110,7 @@ pyenv global 3.12
     INFO:werkzeug: * Debugger PIN: 695-801-919
     ```
 
-7.  Start the Worker service
+6.  Start the Worker service
 
     To consume asynchronous tasks from the queue, such as dataset file import and dataset document updates, follow these steps to start the Worker service on Linux or macOS:
 

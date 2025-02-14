@@ -59,6 +59,8 @@ pyenv global 3.12
     ```
     cd api
     ```
+> macOS 系统可以通过 `brew install libmagic` 命令安装 libmagic.
+
 2.  复制环境变量配置文件
 
     ```
